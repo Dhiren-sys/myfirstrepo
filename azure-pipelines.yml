@@ -6,15 +6,17 @@
 trigger:
 - main
 
-variables:
-  envvalue: dhiren
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, ${envvalue} !
-  displayName: 'Run  script'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-  displayName: 'Run a multi-line script'
+
+steps:
+  variables:
+  envvalue: dhiren
+  - script: echo Hello, $envvalue !
+    displayName: 'Run  script'
+
+  - script: |
+      echo Add other tasks to build, test, and deploy your project.
+    displayName: 'Run a multi-line script'
