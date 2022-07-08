@@ -12,8 +12,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run ${envvalue} script'
+- script: echo Hello, ${envvalue} !
+  displayName: 'Run  script'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
