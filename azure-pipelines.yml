@@ -9,12 +9,12 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+variables:
+  envvalue: dhiren
 
 
 steps:
-  variables:
-  envvalue: dhiren
-  - script: echo Hello, $envvalue !
+  - script: echo Hello, $(envvalue) !
     displayName: 'Run  script'
 
   - script: |
